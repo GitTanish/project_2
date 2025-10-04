@@ -10,7 +10,7 @@ from fastapi import FastAPI
 from dotenv import load_dotenv
 from models import ChatRequest
 from chat_engine import get_response
-from crisis import contains_crisis_keywords, SAFETY_MESSAGE
+from data.crisis import contains_crisis_keywords, SAFETY_MESSAGE
 from logger import log_chat
 from document_engine import query_documents
 from fastapi.middleware.cors import CORSMiddleware
@@ -49,4 +49,8 @@ def chat_with_memory(request: ChatRequest):
     return {"response": response }
 
 @app.post('/documents')
-def
+def chat_with_documents(request: ChatRequest):
+    response = query_documents(request.query)
+    return {"response":response}
+
+# http://127.0.0.1:8000/docs

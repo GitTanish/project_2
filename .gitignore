@@ -1,9 +1,0 @@
-/data
-/.venv
-/chat_engine.py
-/ui
-.env
-logger.py
-models.py
-requirements.txt
-document_engine.py
