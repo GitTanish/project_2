@@ -1,0 +1,9 @@
+langchain
+llama-index
+haystack
+fastapi
+uvicorn
+requests
+python-dotenv
+pandas==2.0.3
+langchain-groq
